@@ -1,17 +1,27 @@
-import sirwok from './sirwok.png';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import HomepagePage from './pages/HomepagePage/HomepagePage';
+import ContactPage from './pages/ContactPage/ContactPage';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <HomepagePage />,
+    },
+    {
+        path: '/contact',
+        element: <ContactPage />,
+    },
+    {
+        path: '*',
+        element: <ErrorPage />,
+    },
+]);
+
+//TODO CREATE APP TEMPLATE REPO FOR FURTHER USE
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={sirwok} className="App-logo" alt="logo" />
-        <p>
-          Welcome to darkwokweb
-        </p>
-      </header>
-    </div>
-  );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
