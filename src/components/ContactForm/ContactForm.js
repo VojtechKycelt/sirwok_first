@@ -33,12 +33,24 @@ const ContactForm = () => {
         <FormContainer>
             <form action="./welcome.php" method="post">
                 <InputContainer>
-                    Name:
-                    <input type="text" name="name"/>
+                    First Name:
+                    <input type="text" name="first_name"/>
+                </InputContainer>
+                <InputContainer>
+                    Last Name:
+                    <input type="text" name="last_name"/>
                 </InputContainer>
                 <InputContainer>
                     E-mail:
-                    <input type="text" name="name"/>
+                    <input type="text" name="from"/>
+                </InputContainer>
+                <InputContainer>
+                    Subject:
+                    <input type="text" name="subject"/>
+                </InputContainer>
+                <InputContainer>
+                    Message:
+                    <input type="text" name="message"/>
                 </InputContainer>
                 <SubmitButtonContainer>
                     <SubmitButton type="submit">Submit</SubmitButton>
